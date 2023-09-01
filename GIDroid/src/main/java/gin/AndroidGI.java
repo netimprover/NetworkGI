@@ -69,23 +69,10 @@ public class AndroidGI {
 
 
 
-        //// Local Search
+        //// Local Search and GP
         AndroidGI androidGI = new AndroidGI(testRunner, sourceFile, editTypes, androidProject);
         androidGI.localSearch();
-//        addIfStatementEdit edit = new addIfStatementEdit(sourceFile, androidGI.rng);
-//        addIfStatementEdit edit1 = (addIfStatementEdit) addIfStatementEdit.fromString("gin.edit.statement.addIfStatementEdit LBN\\app\\src\\main\\java\\acr\\browser\\lightning\\database\\bookmark\\BookmarkExporter.java:335:336 [TAG.length() > 0]");
-//        edit1.toString();
-//        edit.toString();
-        //        edit1.apply(sourceFile);
-//        ReplaceStatement replaceStatement = new ReplaceStatement(sourceFile, androidGI.rng);
-//        replaceStatement.apply(sourceFile);
-        //// MO ALgorithms
-        //NSGAII nsgaii = new NSGAII(androidProject, sourceFile, testRunner, editTypes);
-        //nsgaii.run();
-        //NSGAIII nsgaiii = new NSGAIII(androidProject, sourceFile, testRunner, editTypes);
-        //nsgaiii.run();
-//        SPEA2 spea2 = new SPEA2(androidProject, sourceFile, testRunner, editTypes);
-//        spea2.run();
+        androidGI.GP()
 
         System.exit(0);
     }
